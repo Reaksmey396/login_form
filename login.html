@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .login-container {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-card {
+            width: 100%;
+            max-width: 450px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ffffff;
+            border-radius: 24px;
+            box-shadow:
+                0 25px 60px
+                rgba(15, 23, 42, 0.12);
+            backdrop-filter: blur(20px);
+        }
+        .login-logo {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #4f46e5,
+                    #7c3aed
+                );
+            color: white;
+            font-size: 24px;
+            box-shadow:
+                0 10px 25px
+                rgba(79, 70, 229, 0.3);
+        }
+        .login-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .login-header h1 {
+            color: #111827;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+        .login-header p {
+            color: #64748b;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .remember-me {
+            margin: 5px 0 22px;
+        }
+        .remember-me label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #64748b;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .remember-me input {
+            width: 16px;
+            height: 16px;
+            accent-color: #4f46e5;
+            cursor: pointer;
+        }
+        .login-button {
+            width: 100%;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            border-radius: 12px;
+            background:blue;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background: rgb(2, 2, 224);
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 28px 0;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+           /* SOCIAL LOGIN */
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .social-button {
+            width: 100%;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 12px;
+            background: white;
+            color: #1953af;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 2px solid #e2e8f0;
+        }
+        .social-button i {
+            font-size: 17px;
+        }
+        .social-button:hover {
+            background: #c2c3c5;
+            border-color: #cbd5e1;
+        }
+
+           /* REGISTER */
+        .register-text {
+            margin-top: 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+        }
+        .register-text a {
+            color: #4f46e5;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .register-text a:hover {
+            text-decoration: underline;
+        }
+
+           /* RESPONSIVE */
+        @media (max-width: 500px) {
+
+            .login-container {
+                padding: 20px;
+            }
+            .login-card {
+                padding: 30px 22px;
+                border-radius: 20px;
+            }
+            .login-header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body style="font-family: sans-serif;">
+    <main class="login-container">
+        <section class="login-card">
+            <!-- Header -->
+            <header class="login-header">
+                <h1>Welcome Back</h1>
+                <p>Login to continue to your account</p>
+            </header>
+            <!-- Login Form -->
+            <form>
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">
+                        Email Address
+                    </label>
+                    <div class="input-wrapper">
+                        <input style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;"
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <label for="">Password</label>
+                        <input style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1;"
+                            placeholder="Enter your password"
+                            required
+                        >
+                    </div>
+                </div>
+                <!-- Remember Me -->
+                <div style="display: flex; gap: 145px;" class="remember-me">
+                    <label>
+                        <input type="checkbox">
+                        <span>
+                            Remember me
+                        </span>
+                    </label>
+                    <a style="font-size: small;" href="#">Forgot Password</a>
+                </div>
+                <!-- Login -->
+                <button type="submit" class="login-button">Login
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+            <!-- Divider -->
+            <div class="divider">
+                <span>OR</span>
+            </div>
+            <!-- Social Login -->
+            <div class="social-login">
+                <button type="button" class="social-button">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with Google
+                </button>
+            </div>
+            <!-- Register -->
+            <p class="register-text">Don't have an account?
+                <a href="#">Create account</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
